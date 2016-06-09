@@ -147,6 +147,7 @@ BOOST_AUTO_TEST_CASE (util)
 #ifdef WIN32
   BOOST_CHECK(typeString<Function>() == "class roboptim::GenericFunction<struct roboptim::EigenMatrixDense>");
 #else
+  std::cout << typeString<Function>() << std::endl;
   BOOST_CHECK(typeString<Function>() == "roboptim::GenericFunction<roboptim::EigenMatrixDense>");
 #endif
 
